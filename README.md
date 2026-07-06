@@ -1,3 +1,5 @@
+English | [简体中文](./README.zh-CN.md)
+
 # opencode-sessions-sidebar
 
 OpenCode TUI plugin that displays the current project's active sessions list in the sidebar.
