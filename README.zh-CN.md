@@ -2,6 +2,8 @@
 
 # opencode-sessions-sidebar
 
+<img width="539" height="196" alt="image" src="https://github.com/user-attachments/assets/2515b538-f134-4dc4-888c-969f302a2044" />
+
 OpenCode TUI 插件，在侧边栏显示当前项目的活跃会话列表。
 
 ## 功能特性
