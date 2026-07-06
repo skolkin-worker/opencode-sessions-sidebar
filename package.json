@@ -29,8 +29,8 @@
     "build": "tsc && node build.tui.mjs",
     "build:tui": "node build.tui.mjs",
     "typecheck": "tsc --noEmit",
-    "version": "node -e \"require('fs').writeFileSync('src/_version.ts','// auto-generated\nexport const PLUGIN_VERSION='+JSON.stringify(require('./package.json').version)+';\n')\"",
-    "prepublishOnly": "tsc"
+    "version": "node gen-version.mjs",
+    "prepublishOnly": "npm run build"
   },
   "keywords": [
     "opencode",
@@ -41,7 +41,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/user/opencode-sessions-sidebar.git"
+    "url": "git+https://github.com/Mangome/opencode-sessions-sidebar.git"
   },
   "license": "MIT",
   "peerDependencies": {
