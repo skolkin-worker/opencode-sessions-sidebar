@@ -44,9 +44,10 @@ function SessionsPanel(props: {
       })
       if (result.data && Array.isArray(result.data)) {
         const normDir = normalizePath(dir)
-        const filtered = normDir
+        const inDir = normDir
           ? result.data.filter((s) => normalizePath(s.directory) === normDir)
           : result.data
+        const filtered = inDir.filter((s) => !s.parentID)
         const sorted = [...filtered].sort(
           (a, b) => (b.time?.updated ?? 0) - (a.time?.updated ?? 0)
         )
