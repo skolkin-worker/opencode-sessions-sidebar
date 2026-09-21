@@ -38,7 +38,7 @@ function SessionsPanel(props: {
     try {
       const dir = props.api.state.path.directory
       const result = await props.api.client.session.list({
-        limit: props.maxSessions(),
+        limit: 100,
         scope: "project",
         directory: dir,
       })
