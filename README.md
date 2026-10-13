@@ -13,7 +13,7 @@ OpenCode TUI plugin that displays the current project's active sessions list in 
 - **Current session indicator**: The active session is marked with a `•` dot in the theme's success color (same as connected MCP servers)
 - **Running indicator**: Sessions currently generating show a braille spinner animation
 - **Project-scoped**: Only shows sessions belonging to the current project directory
-- **Real-time updates**: List refreshes automatically on `session.created` / `session.updated` / `session.deleted` events
+- **Real-time updates**: List refreshes automatically on `session.created` / `session.renamed` / `session.deleted` and execution events
 - **Collapsible panel**: Click the header to collapse/expand; state persists across restarts
 - **Slash commands**: `/sessions-refresh` and `/sessions-count` for runtime configuration
 - **Native look**: Borderless panel styled like the built-in MCP / Context sidebar blocks, using theme colors directly; session titles wrap by word
@@ -34,12 +34,12 @@ opencode-sessions-sidebar@latest
 npm install -g opencode-sessions-sidebar@latest
 ```
 
-Then create or edit `~/.config/opencode/tui.jsonc`:
+Then create or edit `~/.config/opencode/cli.json`:
 
 ```jsonc
 {
-  "$schema": "https://opencode.ai/tui.json",
-  "plugin": ["opencode-sessions-sidebar@latest"]
+  "$schema": "https://opencode.ai/v2/cli.json",
+  "plugins": ["opencode-sessions-sidebar@latest"]
 }
 ```
 
